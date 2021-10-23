@@ -22,14 +22,7 @@ const app = express();
 app.use(express.static("./views"));
 app.use(express.static(path.resolve('public')));
 
-/** MIDDLEWARE  Analogy **/
-/*
-middleware is a function that gets executed before the route handler
-it is used to check if the user is authenticated or not before allowing the user to access the route handler
->> User       Middleware                    Middleware       Handler
-// Client -- express.json(bodyParser), app.use(morgan) -- function(handler)
-*/
-// express.json(bodyParser) middleware to parse the request body
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
